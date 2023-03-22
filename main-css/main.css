@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  display: flex;
+  position: relative;
+}
+
+.refocus-logo {
+  margin-left: 80px;
+}
+
+.header-container {
+  background-color: #192140;
+  position: relative;
+  width: 100%;
+  height: 84px;
+}
+
+.refocus-logo-container {
+  position: relative;
+  display: flex;
+  top: 29px;
+}
+
+.menu-container {
+  font-family: "Inter";
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  position: absolute;
+  right: 80px;
+  height: 50px;
+  top: calc(50% - 24px);
+}
+
+.Blog:hover, .Ourcourse:hover, .FreeWebinars:hover, .Reviews:hover {
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  color: #DCF10D;
+  cursor: pointer;
+}
+
+.menu-container {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.SignUp, .LogIn {
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: #9D9DB5;
+}
+
+.SignUp:hover, .LogIn:hover {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 5px;
+  width: 86px;
+  height: 48px;
+  border: 1px solid #0266FF;
+  border-radius: 40px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #0266FF;
+  cursor: pointer;
+}
+
+.SignUp:active, .LogIn:active {
+  color: #FFFFFF;
+  background-color: #0266FF;
+}
+
+.card-container {
+  display: flex;
+  width: 100%;
+  height: 1097px;
+  background-color: #FFFFFF;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  grid-template-rows: repeat(3, 300px);
+  gap: 50px;
+  margin: auto;
+}
+.cards img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px 6px 0px 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.card-info {
+  display: grid;
+  position: relative;
+  height: 100px;
+  bottom: 73px;
+  padding: 10px 20px 10px 20px;
+  background: #F8F9FC;
+  grid-template-columns: 50% 30% 10% 10%;
+  grid-template-rows: 75% 5px 20%;
+}
+.card-info .likes {
+  grid-row: 3/4;
+  grid-column: 4/5;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.03em;
+  line-height: 130%;
+  color: #9D9DB5;
+}
+.card-info .heart {
+  grid-row: 3/4;
+  grid-column: 3/4;
+  display: flex;
+  margin-top: 4px;
+}
+.card-info .date {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #C0BFCF;
+  border-radius: 40px;
+  width: auto;
+  height: 24px;
+  padding-left: 3px;
+  padding-right: 3px;
+  color: #9D9DB5;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  border-top: 0.5px solid #9D9DB5;
+}
+.card-info .question {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  grid-row: 1/2;
+  grid-column: 1/5;
+  border-bottom: 0.7px solid #9D9DB5;
+  color: #10131C;
+}
+
+.heart {
+  background-image: url(/assets/logo/heart.svg);
+  background-repeat: no-repeat;
+}
+.heart:hover {
+  background-image: url(/assets/logo/heartOutline.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.heart.on {
+  background-image: url(/assets/logo/heartSolid.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.EachCard {
+  position: relative;
+}
+
+.EachCard:hover {
+  cursor: pointer;
+}
+.EachCard:hover .overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%);
+  border-radius: 6px 6px 0px 0px;
+}
+.EachCard:hover .delete {
+  background-image: url(/assets/logo/cross.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  display: flex;
+  left: 89.06%;
+  right: 4.69%;
+  top: 5%;
+  bottom: 88.33%;
+  width: 25px;
+  height: 25px;
+}
+.EachCard:hover .delete.delete:hover {
+  background-image: url(/assets/logo/cross-hover.svg);
+  background-repeat: no-repeat;
+}
+.EachCard:hover .delete.delete:hover.delete:active {
+  background-image: url(/assets/logo/cross-clicked.svg);
+  background-repeat: no-repeat;
+}
+.EachCard:hover .mark-as-read {
+  background-image: url(/assets/logo/check.svg);
+  background-repeat: repeat;
+  width: 20px;
+  height: 20px;
+  left: 85%;
+  right: 4.69%;
+  top: 50%;
+  bottom: 88.33%;
+  position: absolute;
+  display: flex;
+}
+.EachCard:hover .mark-as-read.on {
+  background-image: url(/assets/logo/checked.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 274px;
+  background-color: #10131C;
+}
+
+.blog-container {
+  font-family: "Inter";
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 70%;
+  margin: 60px 0px 60px 80px;
+  color: #FFFFFF;
+}
+
+.list-blog {
+  font-family: "Inter";
+  display: flex;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  list-style: none;
+  color: #D7F8FF;
+}
+
+.list-course {
+  font-family: "Inter";
+  display: flex;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  list-style: none;
+  color: #D7F8FF;
+}
+
+.title {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.title-FollowUs {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.legality {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  opacity: 0.4;
+  margin-top: 70px;
+  color: #FFFFFF;
+}
+
+.social-legality {
+  width: 30%;
+  margin: 60px 80px 60px 10px;
+  justify-content: center;
+}
+
+.title-FollowUs {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 320px) {
+  .menu-container {
+    display: none;
+  }
+  .header-container {
+    display: flex;
+    position: relative;
+    margin: auto;
+  }
+  .card-container {
+    width: 320px;
+    height: 100%;
+  }
+  .refocus-logo {
+    margin-left: 15px;
+    position: absolute;
+    width: 84.4px;
+    height: 20px;
+    top: 15px;
+  }
+  .hamburger {
+    background-image: url(/assets/logo/MenuBurger.svg);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    top: 40px;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 290px);
+    grid-template-rows: repeat(9, 257px);
+    margin-top: 40px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 429px;
+    width: 320px;
+    margin-top: 30px;
+  }
+  .blog-container {
+    width: 100%;
+    margin: 40px 15px 20px 15px;
+  }
+  .social-legality {
+    margin: 15px 100% 40px 15px;
+    width: 60%;
+  }
+  .legality {
+    margin-top: 40px;
+    margin-right: 10px;
+  }
+  .blog-menu {
+    width: 100%;
+  }
+  .list-blog {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=main.css.map */
